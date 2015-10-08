@@ -1,7 +1,18 @@
 # Ember-talking-components
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+How does one ember component talk to another without the use of a controller?
+
+Answer: the ember event bus.
+
+Using the event bus allows loosely coupled components. It likely violates actions up, data down as it is more actions across, data across.
+
+The likely use cases are communicating non-model data as [jabene asks](http://discuss.emberjs.com/t/communication-between-components/7353/3).
+
+The advantages are that this does not require using a wrapper or container nor require a component to only communicate with children.
+
+In response to [solsberg question](http://discuss.emberjs.com/t/how-to-communicate-to-child-components/7772), yes use the event bus.
+
+This is not an original idea as [Paul Cowan](http://www.thesoftwaresimpleton.com/blog/2015/04/27/event-bus/) and [Frank Treacy](http://emberigniter.com/parent-to-children-component-communication/) showed me how to do this with their articles.
 
 ## Prerequisites
 
@@ -50,4 +61,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
