@@ -8,9 +8,6 @@ moduleForComponent('component-a', 'Integration | Component | component a', {
 test('it renders', function(assert) {
   assert.expect(2);
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
   this.render(hbs`{{component-a}}`);
 
   assert.equal(this.$("[name='url']").val().trim(), 'http://www.google.com');
